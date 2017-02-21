@@ -1,7 +1,9 @@
 FROM node:boron
 
+
+RUN npm install webpack -g
+
 # Create app directory
-RUN mkdir -p /app
 WORKDIR /app
 
 # Install app dependencies
@@ -11,5 +13,4 @@ RUN npm install
 # Bundle app source
 COPY . /app
 
-EXPOSE 3200
-CMD [ "npm", "start" ]
+RUN npm run build

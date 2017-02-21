@@ -1,8 +1,0 @@
-version: '2'
-services:
-  web:
-    build: .
-    ports:
-     - "3200:3200"
-    volumes:
-     - .:/usr/src/app/

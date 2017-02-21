@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
-import { InfiniteScrollModule } from 'angular2-infinite-scroll';
 import {ResumeComponent } from '../app/resume/resume.component';
 import {SideBarComponent } from '../app/resume/sidebar/sidebar.component';
 import {ExperienceComponent } from '../app/resume/experience/experience.component';
@@ -20,7 +19,6 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    InfiniteScrollModule
   ],
   declarations: [
     AppComponent,
