@@ -3,20 +3,17 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { InfiniteScrollModule } from 'angular2-infinite-scroll';
-import {AboutComponent} from './about/about.component';
-import {ExperienceComponent} from './experience/experience.component';
-import {EducationComponent} from './education/education.component';
-import {SkillsComponent} from './skills/skills.component';
-import {ContactComponent} from './contact/contact.component';
+import {ResumeComponent } from '../app/resume/resume.component';
+import {SideBarComponent } from '../app/resume/sidebar/sidebar.component';
+import {ExperienceComponent } from '../app/resume/experience/experience.component';
+import {EducationComponent } from '../app/resume/education/education.component';
+import {InterestsComponent } from '../app/resume/interests/interests.component';
+
 
 
 const appRoutes: Routes = [
-  { path: 'about', component: AboutComponent },
-  { path: 'experience', component: ExperienceComponent },
-  { path: 'education', component: EducationComponent },
-  { path: 'skills', component: SkillsComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: '**', component: AboutComponent }
+  { path: 'resume', component: ResumeComponent },
+  { path: '**', component:ResumeComponent }
 ];
 
 @NgModule({
@@ -27,11 +24,11 @@ const appRoutes: Routes = [
   ],
   declarations: [
     AppComponent,
-    AboutComponent,
+    ResumeComponent,
+    SideBarComponent,
     ExperienceComponent,
     EducationComponent,
-    SkillsComponent,
-    ContactComponent
+    InterestsComponent,
   ],
   bootstrap: [ AppComponent ]
 })

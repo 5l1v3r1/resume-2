@@ -23,10 +23,11 @@
     "zone.js": "^0.7.5"
   },
   "devDependencies": {
-    "@types/jasmine": "^2.5.35",
+    "@types/jasmine": "2.5.35",
     "@types/node": "^6.0.45",
     "angular2-template-loader": "^0.4.0",
     "awesome-typescript-loader": "^2.2.4",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "favicons-webpack-plugin": "0.0.7",

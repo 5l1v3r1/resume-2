@@ -3,6 +3,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
 var FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: {
     'polyfills': './src/polyfills.ts',
@@ -42,11 +43,11 @@ module.exports = {
       { 
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
         loader: "file-loader" 
-      },
-      {
-          test: /\.scss$/,
-          loader: ExtractTextPlugin.extract('css!sass')
       }
+      // {
+      //     test: /\.scss$/,
+      //     loader: ExtractTextPlugin.extract('css!sass')
+      // }
     ]
   },
 
