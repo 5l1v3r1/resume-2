@@ -1,11 +1,32 @@
-import { TestBed } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { inject, async, TestBed, ComponentFixture } from '@angular/core/testing';
+
+// Load the implementations that should be tested
 import { AppComponent } from './app.component';
-describe('App', () => {
+
+describe(`App`, () => {
+  let comp: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+
+  // async beforeEach
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [AppComponent],
+      schemas: [NO_ERRORS_SCHEMA],
+    })
+      .compileComponents();
+  }));
+
   beforeEach(() => {
-    TestBed.configureTestingModule({ declarations: [AppComponent]});
+    fixture = TestBed.createComponent(AppComponent);
+    comp = fixture.componentInstance;
+
+    fixture.detectChanges();
   });
-  it ('should work', () => {
-    let fixture = TestBed.createComponent(AppComponent);
-    expect(fixture.componentInstance instanceof AppComponent).toBe(true, 'should create AppComponent');
+
+  it(`should be initialized`, () => {
+    expect(fixture).toBeDefined();
+    expect(comp).toBeDefined();
   });
+
 });
