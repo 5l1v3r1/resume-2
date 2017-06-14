@@ -8,11 +8,8 @@ branches:
   only:
     - master
 
-before_script:
-  - npm install -g @angular/cli
-
 script:
-  - ng build --prod
+  - npm build
 
 notifications:
   email:
