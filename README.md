@@ -1,4 +1,7 @@
-# Resume
+# Resume 
+
+[![Build Status](https://travis-ci.org/Steven-Harris/resume.svg?branch=master)](https://travis-ci.org/Steven-Harris)
+
 This is the git repo for my resume feel free to take a look around.
 
 # Development
