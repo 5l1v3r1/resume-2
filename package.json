@@ -1,9 +1,9 @@
 {
   "name": "resume",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "scripts": {
-    "commit": "git-cz",
+    "commit": "standard-changelog  && git add . && git-cz",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -46,6 +46,7 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.0",
+    "standard-changelog": "^1.0.1",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.2.0"
