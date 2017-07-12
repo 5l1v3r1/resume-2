@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "license": "MIT",
   "scripts": {
-    "commit": "standard-changelog  && git add . && git-cz",
+    "commit": "git add . && git-cz",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
