@@ -22,8 +22,8 @@
         "styles.scss"
       ],
       "scripts": [
-        "../src/assets/js/jquery.min.js",
-        "../src/assets/js/materialize.min.js"
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/wow/lib/main.js"
 
       ],
       "environmentSource": "environments/environment.ts",

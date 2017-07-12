@@ -1,6 +1,6 @@
 {
   "name": "resume",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "license": "MIT",
   "scripts": {
     "commit": "git add . && git-cz",
@@ -27,7 +27,11 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
+    "font-awesome-sass": "^4.7.0",
+    "jquery": "^3.2.1",
+    "materialize-sass": "^0.98.2",
     "rxjs": "^5.1.0",
+    "wow": "^0.0.6",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
@@ -46,7 +50,6 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.0",
-    "standard-changelog": "^1.0.1",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.2.0"
