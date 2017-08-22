@@ -1,33 +1,27 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { NgModule } from '@angular/core';
-import { BrowserModule }  from '@angular/platform-browser';
+import { MdCardModule } from '@angular/material';
 import { AppComponent } from './app.component';
-import { RouterModule, Routes } from '@angular/router';
-import {ResumeComponent } from '../app/resume/resume.component';
-import {SideBarComponent } from '../app/resume/sidebar/sidebar.component';
-import {ExperienceComponent } from '../app/resume/experience/experience.component';
-import {EducationComponent } from '../app/resume/education/education.component';
-import {InterestsComponent } from '../app/resume/interests/interests.component';
 
-
-
-const appRoutes: Routes = [
-  { path: 'resume', component: ResumeComponent },
-  { path: '**', component:ResumeComponent }
-];
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { FirebaseService } from './firebase';
+import { environment } from '../environments/environment';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(appRoutes),
-  ],
   declarations: [
-    AppComponent,
-    ResumeComponent,
-    SideBarComponent,
-    ExperienceComponent,
-    EducationComponent,
-    InterestsComponent,
+    AppComponent
   ],
-  bootstrap: [ AppComponent ]
+  imports: [
+    AngularFireModule.initializeApp(environment.firebase, 'my-app'),
+    AngularFireDatabaseModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    MdCardModule
+  ],
+  providers: [FirebaseService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

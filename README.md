@@ -1,11 +1,6 @@
 # Resume
-[![Build Status](https://travis-ci.org/Steven-Harris/resume.svg?branch=master)](https://travis-ci.org/Steven-Harris)
-[![Dependency Status](https://www.versioneye.com/user/projects/594453596725bd00475ca223/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/594453596725bd00475ca223)
-[![Known Vulnerabilities](https://snyk.io/test/github/steven-harris/resume/badge.svg)](https://snyk.io/test/github/steven-harris/resume)
 
-This is the git repo for my resume feel free to take a look around.
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.1.
 
 ## Development server
 
@@ -13,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
