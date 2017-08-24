@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { FirebaseService } from './firebase';
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -15,13 +14,12 @@ import { environment } from '../environments/environment';
     AppComponent
   ],
   imports: [
-    AngularFireModule.initializeApp(environment.firebase, 'my-app'),
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     BrowserModule,
     BrowserAnimationsModule,
     MdCardModule
   ],
-  providers: [FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
