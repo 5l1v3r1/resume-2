@@ -1,6 +1,6 @@
 export interface Experience {
-    company:string,
-    description: string,
-    timeRange:string,
-    title: string
+  company: string;
+  description: string;
+  timeRange: string;
+  title: string;
 }

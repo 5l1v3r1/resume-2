@@ -1,4 +1,4 @@
 export interface Interests {
-    image: string,
-    link: string
-}   
+  image: string;
+  link: string;
+}

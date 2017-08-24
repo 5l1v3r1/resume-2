@@ -1,5 +1,5 @@
 export interface Education {
-    degree:string,
-    timeRange: string,
-    university: string,   
+  degree: string;
+  timeRange: string;
+  university: string;
 }

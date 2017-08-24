@@ -1,4 +1,4 @@
 export interface Skill {
-    rating: number,
-    skill: string   
+  rating: number;
+  skill: string;
 }
