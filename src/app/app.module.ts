@@ -8,10 +8,12 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
-
+import { FirebaseService } from './services/firebase';
+import { ReversePipe } from './pipes/reverse.pipe';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ReversePipe
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
@@ -20,6 +22,7 @@ import { environment } from '../environments/environment';
     BrowserAnimationsModule,
     MdCardModule
   ],
+  providers: [FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

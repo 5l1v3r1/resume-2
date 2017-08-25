@@ -1,38 +1,71 @@
 <div class="container content">
-    <div class="row">
-        <div class="col-md-4">
-            <md-card class="sidebar">
-                Simple card
-            </md-card>
+  <div class="row">
+    <div class="col-md-4">
+      <md-card class="sidebar info">
+        <div class="row profileImage">
+          <img src="{{resume.info.image}}" alt="{{resume.info.image}}">
         </div>
-        <div class="col-md-8">
-            <md-card class="sidebar">
-                Simple card
-            </md-card>
-            <md-card class="experience">
-                <md-card-content>
-                       
-                    <!-- <md-card-header>
-                        <div md-card-avatar class="fa fa-suitcase"></div>
-                        <h2>Work Experience</h2>
-                    </md-card-header>
-                    <div *ngFor="let exp of resume.experience | async">
-                        <h3>{{exp.title}} <span>@{{exp.company}}</span></h3>
-                        <span>{{exp.timeRange}}</span>
-                        <p>{{exp.description}} </p>
-                    </div> -->
-                   
-                </md-card-content>
-            </md-card>
-            <md-card class="education">
-                Simple card
-            </md-card>
-            <md-card class="interests">
-                Simple card
-            </md-card>
+        <div class="row">
+          <i class="fa fa-user"></i>
+          <h2>{{resume.info.name}}</h2>
+          <span>{{resume.info.title}}</span>
         </div>
+        <div class="row">
+          <i class="fa fa-info"></i>
+          <p>{{resume.info.bio}}</p>
+        </div>
+        <div class="row">
+          <i class="fa fa-phone"></i>
+          <h4><a href="tel:{{resume.info.phone}}">{{resume.info.phone}}</a></h4>
+          <span>mobile</span>
+        </div>
+        <div class="row">
+          <i class="fa fa-envelope"></i>
+          <h4><a href="mailto:{{resume.info.email}}">{{resume.info.email}}</a></h4>
+          <span>email</span>
+        </div>
+      </md-card>
+
     </div>
+    <div class="col-md-8">
+      <md-card class="experience">
+        <md-card-content>
+          <md-card-header>
+            <div md-card-avatar class="fa fa-suitcase"></div>
+            <h2>Work Experience</h2>
+          </md-card-header>
+          <div *ngFor="let exp of resume.experience | reverse">
+            <h3>{{exp.title}} <span>@{{exp.company}}</span></h3>
+            <span>{{exp.timeRange}}</span>
+            <p>{{exp.description}} </p>
+          </div>
+        </md-card-content>
+      </md-card>
+      <md-card class="education">
+        <md-card-content>
+          <md-card-header>
+            <i class="fa fa-graduation-cap"></i>
+            <h2>Education </h2>
+          </md-card-header>
+          <div *ngFor="let ed of resume.education | reverse">
+            <h3>{{ed.degree}}<span> @{{ed.university}}</span></h3>
+            <span>{{ed.timeRange}}</span>
+          </div>
+        </md-card-content>
+      </md-card>
+      <md-card class="interests">
+        <md-card-content>
+          <md-card-header>
+            <i class="fa fa-code"></i>
+            <h2>Interests</h2>
+          </md-card-header>
+          <ul>
+            <li *ngFor="let int of resume.interests">
+              <a href="{{int.link}}"><img src="{{int.image}}" alt="{{int.image}}"></a>
+            </li>
+          </ul>
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
 </div>
-<div *ngFor="let res of resume | async">
-        {{res.$value}}
-    </div>
