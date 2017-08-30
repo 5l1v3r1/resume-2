@@ -26,7 +26,7 @@
         "angularfire2": "^4.0.0-rc0",
         "bootstrap": "4.0.0-alpha.6",
         "core-js": "^2.4.1",
-        "firebase": "^4.3.0",
+        "firebase": "3.6.6",
         "font-awesome": "^4.7.0",
         "karma-scss-preprocessor": "^3.0.0",
         "rxjs": "^5.4.2",
