@@ -34,6 +34,7 @@ testem.log
 /typings
 yarn-error.log
 .DS_Store
+package-lock.json
 
 # e2e
 /e2e/*.js
@@ -42,3 +43,4 @@ yarn-error.log
 # System Files
 .DS_Store
 Thumbs.db
+debug.log
