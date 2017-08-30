@@ -3,6 +3,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
 import { MdCardModule } from '@angular/material';
+import { MdChipsModule } from '@angular/material';
 import { ReversePipe } from './pipes/reverse.pipe';
 import { FirebaseService, Firebase } from './services/firebase';
 import { FirebaseServiceMock } from './mocks';
@@ -17,7 +18,8 @@ describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        MdCardModule
+        MdCardModule,
+        MdChipsModule
       ],
       declarations: [
         AppComponent,
