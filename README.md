@@ -1,6 +1,11 @@
 # Resume
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.1.
+
+[![Build Status](https://travis-ci.org/Steven-Harris/resume.svg?branch=master)](https://travis-ci.org/Steven-Harris)
+[![Dependency Status](https://www.versioneye.com/user/projects/594453596725bd00475ca223/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/594453596725bd00475ca223)
+[![Known Vulnerabilities](https://snyk.io/test/github/steven-harris/resume/badge.svg)](https://snyk.io/test/github/steven-harris/resume)
+
+This is the git repo for my resume feel free to take a look around.
 
 ## Development server
 
