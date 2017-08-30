@@ -1,6 +1,122 @@
-<main>
-  <!--<div class="profilePic col-md-2">
-          <img class="img-fluid img-responsive" src="https://www.gravatar.com/avatar/{{this.emailHash}}?s=500" />
-        </div> -->
-    <router-outlet></router-outlet>
-</main>
+<div class="container content">
+  <div class="row">
+    <div class="col-md-4">
+      <md-card class="sidebar">
+        <img md-card-image src="{{resume?.info.image}}" alt="{{resume?.info.image}}">
+        <div class="row">
+          <div class="col-lg-2 text-center">
+            <i class="fa fa-user"></i>
+          </div>
+          <div class="col-lg-10 detail">
+            <h2>{{resume?.info.name}}</h2>
+            <span>{{resume?.info.title}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-2 text-center">
+            <i class="fa fa-info"></i>
+          </div>
+          <div class="col-lg-10 detail">
+            <p>{{resume?.info.bio}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-2 text-center">
+            <i class="fa fa-phone"></i>
+          </div>
+          <div class="col-lg-10 detail">
+            <h4><a href="tel:{{resume?.info.phone}}">{{resume?.info.phone}}</a></h4>
+            <span>mobile</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-2 text-center">
+            <i class="fa fa-envelope"></i>
+          </div>
+          <div class="col-lg-10 detail">
+            <h4><a href="mailto:{{resume?.info.email}}">{{resume?.info.email}}</a></h4>
+            <span>email</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-2 text-center">
+            <i class="fa fa-home"></i>
+          </div>
+          <div class="col-lg-10 detail border-none">
+            <h4><a href="https://maps.google.com/?q={{resume?.info.location}}">{{resume?.info.location}}</a></h4>
+            <span>location</span>
+          </div>
+        </div>
+      </md-card>
+    </div>
+    <div class="col-md-8 sections">
+      <md-card>
+        <md-card-content>
+          <div class="row">
+            <div class="col-lg-2 text-center">
+              <i class="fa fa-suitcase"></i>
+            </div>
+            <div class="experience col-lg-10">
+              <h2>Work Experience</h2>
+              <div *ngFor="let exp of resume?.experience | reverse">
+                <h3>{{exp.title}} <small>@{{exp.company}}</small></h3>
+                <span>{{exp.timeRange}}</span>
+                <p>{{exp.description}} </p>
+              </div>
+            </div>
+          </div>
+        </md-card-content>
+      </md-card>
+      <md-card>
+        <md-card-content>
+          <div class="row">
+            <div class="col-lg-2 text-center">
+              <i class="fa fa-graduation-cap"></i>
+            </div>
+            <div class="education col-lg-10">
+              <h2>Education </h2>
+              <div *ngFor="let ed of resume?.education | reverse">
+                <h3>{{ed.degree}}<small> @{{ed.university}}</small></h3>
+                <span>{{ed.timeRange}}</span>
+              </div>
+            </div>
+          </div>
+        </md-card-content>
+      </md-card>
+      <md-card>
+        <md-card-content>
+          <div class="row">
+            <div class="col-lg-2 text-center">
+              <i class="fa fa-code"></i>
+            </div>
+            <div class="col-lg-10 skills">
+              <h2>Skills</h2>
+              <md-chip-list>
+                <md-chip *ngFor="let area of resume?.info.skills" selected="true"  color="none">
+                  {{area.skill}}
+                </md-chip>
+              </md-chip-list>
+            </div>
+          </div>
+        </md-card-content>
+      </md-card>
+      <md-card>
+        <md-card-content>
+          <div class="row">
+            <div class="col-lg-2 text-center">
+              <i class="fa fa-book"></i>
+            </div>
+            <div class="col-lg-10 interests">
+              <h2>Interests</h2>
+              <ul>
+                <li *ngFor="let int of resume?.interests">
+                  <a href="{{int.link}}"><img src="{{int.image}}" alt="{{int.image}}"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+</div>
