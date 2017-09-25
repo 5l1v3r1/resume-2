@@ -19,18 +19,18 @@ export class AppComponent implements OnInit {
       this.resume = data[0];
     });
 
-    // listen to the service worker promise in index.html to see if there has been a new update.
-    // condition: the service-worker.js needs to have some kind of change - e.g. increment CACHE_VERSION.
-    window['isUpdateAvailable'].then(isAvailable => {
-      if (isAvailable) {
-        this.snackBar.open('New Update available!', 'Update', {
-          duration: 2000,
-        }).onAction().subscribe(() => {
-          console.log('yes update');
-        });
-      } else {
-        console.log('update not available');
-      }
-    });
+    // // listen to the service worker promise in index.html to see if there has been a new update.
+    // // condition: the service-worker.js needs to have some kind of change - e.g. increment CACHE_VERSION.
+    // window['isUpdateAvailable'].then(isAvailable => {
+    //   if (isAvailable) {
+    //     this.snackBar.open('New Update available!', 'Update', {
+    //       duration: 2000,
+    //     }).onAction().subscribe(() => {
+    //       console.log('yes update');
+    //     });
+    //   } else {
+    //     console.log('update not available');
+    //   }
+    // });
   }
 }
