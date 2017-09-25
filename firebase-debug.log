@@ -1,0 +1,36 @@
+[debug] [2017-09-25T02:46:58.390Z] ----------------------------------------------------------------------
+[debug] [2017-09-25T02:46:58.392Z] Command:       /usr/bin/node /home/superman/.npm-packages/bin/firebase deploy
+[debug] [2017-09-25T02:46:58.392Z] CLI Version:   3.12.0
+[debug] [2017-09-25T02:46:58.392Z] Platform:      linux
+[debug] [2017-09-25T02:46:58.392Z] Node Version:  v8.5.0
+[debug] [2017-09-25T02:46:58.392Z] Time:          Sun Sep 24 2017 21:46:58 GMT-0500 (CDT)
+[debug] [2017-09-25T02:46:58.392Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-09-25T02:46:58.401Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-09-25T02:46:58.401Z] > authorizing via signed-in user
+[debug] [2017-09-25T02:46:58.403Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/steven-harris-resume  
+ Sun Sep 24 2017 21:46:58 GMT-0500 (CDT)
+[debug] [2017-09-25T02:46:58.741Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-25T02:46:58.742Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/steven-harris-resume/tokens  
+ Sun Sep 24 2017 21:46:58 GMT-0500 (CDT)
+[debug] [2017-09-25T02:46:59.101Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'steven-harris-resume'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing dist directory for upload...
+[debug] [2017-09-25T02:47:00.126Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/steven-harris-resume/uploads/-KuqvYmEELyIVOCacj54?fileCount=23&message=  
+ Sun Sep 24 2017 21:47:00 GMT-0500 (CDT)
+[debug] [2017-09-25T02:47:06.098Z] <<< HTTP RESPONSE 200
+[debug] [2017-09-25T02:47:06.098Z] [hosting] .tgz uploaded successfully, waiting for extraction
+[info] ✔  hosting: 23 files uploaded successfully
+[info] i  starting release process (may take several minutes)...
+[debug] [2017-09-25T02:47:07.193Z] >>> HTTP REQUEST POST https://deploy.firebase.com/v1/projects/steven-harris-resume/releases { hosting: 
+   { public: 'dist',
+     ignore: [ 'firebase.json', '**/.*', '**/node_modules/**' ],
+     rewrites: [ [Object] ],
+     headers: [ [Object] ],
+     version: '-KuqvYmEELyIVOCacj54',
+     prefix: '-KuqvYmEELyIVOCacj54/',
+     manifest: [] } } 
+ Sun Sep 24 2017 21:47:07 GMT-0500 (CDT)

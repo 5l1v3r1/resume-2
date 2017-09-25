@@ -1,14 +1,54 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>Resume</title>
+  <title>Steven Harris - Resume</title>
   <base href="/">
+  <link rel="icon" type="image/x-icon" href="assets/images//icons/favicon.ico">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="msapplication-starturl" content="/">
+  <meta name="theme-color" content="#2185C5">
+
+  <link rel="manifest" href="/manifest.json">
+
 </head>
+
 <body>
-  <app-root></app-root>
+  <app-root>
+  <div class="wrapper">
+    <div class="editor">
+      <div class="editor__toolbar">
+        <div class="button"></div>
+        <div class="button"></div>
+        <div class="button"></div>
+      </div>
+      <div class="editor__content">
+        <div class="editor__line line">
+          <span class="line__number line__number--symbol">→</span> Loading resume... 
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+   body{background-color:#eae8e7}.wrapper{width:100%;margin:0 auto}.editor{background-color:#2A2F34;border-radius:5px;text-align:left;position:absolute;top:0;bottom:0;left:0;right:0;margin:2rem auto 0;width:95%;height:100px}.editor .editor__toolbar{padding:6px 15px}.editor .editor__toolbar .button{display:inline-block;width:10px;height:10px;margin-right:2px;padding:0;border-radius:100%}.editor .editor__toolbar .button:nth-child(1){background-color:#ED7268}.editor .editor__toolbar .button:nth-child(2){background-color:#F9E600}.editor .editor__toolbar .button:nth-child(3){margin-right:0;background-color:#4BD591}.editor .editor__content{display:table;padding:24px 15px 35px;font-family:Menlo,Monaco,'Courier New',monospace;font-size:13px}.editor .editor__element{color:#539EEC}.editor .editor__value{color:#CE9079}.editor .editor__comment{color:#6e7884}.editor .editor__content .line{display:table-row;line-height:2.3;color:#fff}.line .line__number{display:table-cell;width:25px;color:#6F7984;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.line .line__number.line__number--symbol{position:relative;top:1px;font-size:18px;line-height:normal}
+  </style>
+  </app-root>
+  <script>
+    if ('serviceWorker' in navigator && ['localhost', '127'].indexOf(location.hostname) === -1) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then((registration) => {
+          console.log('SW registered');
+        })
+        .catch((err) => {
+          console.log('SW error', err);
+        });
+    }
+
+  </script>
 </body>
+
 </html>
