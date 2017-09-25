@@ -36,6 +36,8 @@ yarn-error.log
 .DS_Store
 package-lock.json
 yarn.lock
+environment.prod.ts
+environment.ts
 
 # e2e
 /e2e/*.js
